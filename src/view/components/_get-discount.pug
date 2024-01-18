@@ -1,0 +1,14 @@
+//- Included in /components/_header
+
+.discount.js-discount
+	.wrapper.discount__wrapper
+		button.discount__close.js-discount-close
+			| #{data.discount.btn_close}
+
+		p.discount__text
+			<span class='text--accent'>#{data.discount.accent_text}</span>, #{data.discount.plain_text}
+
+		button.discount__cta.text--accent
+			| #{data.discount.btn_get}
+
+	

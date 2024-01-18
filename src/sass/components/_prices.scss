@@ -1,0 +1,76 @@
+.prices {
+  font-family: TTNorms;
+  text-align: center;
+  padding: 0 0 75px;
+
+  &__table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 35px;
+
+    &--md {
+      display: none;
+    }
+  }
+
+  &__item {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__thead {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__table {
+      display: none;
+
+      &--md {
+        margin-top: 25px;
+        display: table;
+        width: 100%;
+      }
+    }
+
+    &__thead {
+      font-size: 16px;
+      line-height: 24px;
+
+      th {
+        padding: 25px 0;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+
+    &__row {
+      border-bottom: 1px solid #ececec;
+    }
+    &__data {
+      padding: 25px 0;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    &__service {
+      text-align: left;
+    }
+  }
+}

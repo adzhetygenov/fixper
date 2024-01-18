@@ -1,0 +1,15 @@
+section.top
+	.wrapper.top__wrapper
+		.top__middle
+			button.top__btn #{data.top.location}
+
+			nav.top__nav
+				each link in data.top.list
+					a.top__link(href='#') #{link}
+
+		a(href="").logo.top__logo
+			img(src=data.top.logo)
+
+		button.top__callback.btn.btn--outline.btn--accent.text--accent.text--fw-500 #{data.top.call}
+
+			

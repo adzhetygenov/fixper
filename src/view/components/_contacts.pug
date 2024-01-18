@@ -1,0 +1,23 @@
+section.contacts
+	.wrapper.contacts__wrapper
+		.contacts__heading
+			h2.contacts__title Контактная информация
+
+		.contacts__map
+			iframe.contacts__frame(src='https://yandex.ru/map-widget/v1/?um=constructor%3Ab96ba94ffb389484e09cad508a49e34ced3a47cc0d1e26153f3d87c48078aac2&source=constructor' width='100%' frameborder='0')
+
+		.contacts__info
+			.contacts__locations
+				address.contacts__location
+					p.contacts__address ул. Стрелковая, д. 14 (офис 1)
+					p.contacts__schedule 8:00 - 21:00 без выходных
+
+				address.contacts__location
+					p.contacts__address ул. Карла Маркса, д. 33 (диспетчерская)
+					p.contacts__schedule 7:00—23:00 без выходных
+
+			address.contacts__list
+				a.contacts__mail(href='mailto:') iavaisov@gmail.com
+				a(href='tel:').btn.btn--outline.btn--primary.text--primary.contacts__btn.text--fw-700 Позвонить
+		
+

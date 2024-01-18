@@ -1,0 +1,90 @@
+.qa {
+  font-family: TTNorms;
+  padding: 75px 0;
+
+  &__wrapper {
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+    }
+  }
+
+  &__heading {
+    @media (min-width: 1024px) {
+      grid-column: 1 / 4;
+    }
+  }
+  &__preheading {
+    padding: 25px 0 35px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  &__questions {
+    list-style-type: none;
+
+    @media (min-width: 1024px) {
+      grid-column: 7 / -1;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__question {
+    position: relative;
+  }
+
+  &__answer {
+    transition: 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  &__btn {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    text-align: left;
+    padding: 25px 0;
+    background: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    gap: 20px;
+
+    &::after {
+      content: "";
+      transition: 0.2s ease-out;
+      transform-origin: center;
+      flex: 0 0 30px;
+      height: 30px;
+      background: {
+        image: url("../img/circle-close.svg");
+        repeat: no-repeat;
+        size: contain;
+        position: center;
+      }
+    }
+
+    &--active {
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

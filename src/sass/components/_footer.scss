@@ -1,0 +1,65 @@
+.footer {
+  font-family: TTNorms;
+  padding: 75px 0;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__nav {
+    margin: 40px 0 50px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 20px;
+  }
+
+  &__link,
+  &-payment-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &__payment-methods {
+    padding: 35px 0;
+    text-align: center;
+  }
+
+  &-payment-title {
+    margin-bottom: 15px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    list-style-type: none;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+  &__copyright {
+    padding: 35px 0;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    > p {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}

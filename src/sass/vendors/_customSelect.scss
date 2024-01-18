@@ -1,0 +1,40 @@
+.choices {
+  font-family: TTNorms;
+
+  &__inner {
+    border-radius: 5px;
+    padding: 20px 25px;
+    border: 1px solid #96317d;
+    color: #96317d;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+  }
+
+  &[data-type*="select-one"] .choices__inner {
+    padding-bottom: 20px;
+  }
+
+  &[data-type*="select-one"]::after {
+    transition: 0.3s ease-out;
+    border: none;
+    width: 9px;
+    height: 7px;
+    display: block;
+    right: 27px;
+    background: {
+      image: url("../img/select_arrow.svg");
+      repeat: no-repeat;
+      size: contain;
+      position: center;
+    }
+  }
+
+  &[data-type*="select-one"].is-open::after {
+    border: none;
+    transform: rotate(-180deg) translateY(-4px);
+    transform-origin: center;
+  }
+}

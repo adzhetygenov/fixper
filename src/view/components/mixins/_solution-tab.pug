@@ -1,0 +1,21 @@
+mixin tab(tab)
+	.cause__solutions.solutions.js-tab(data-tab=tab.id)
+		.solutions__heading
+			button.solutions__back.text--primary.text--fw-700.js-back #{data.tabs.title}
+			h2.solutions__title #{data.tabs.back_btn}
+
+		.solutions__list
+			each item in tab.info
+				.solutions__item
+					.solutions__bar
+						svg(viewbox='0 0 100 100')
+							circle(cx='50' cy='50' r='46').js-bar
+						.solutions__number.js-percent #{item.percent}
+
+					.solutions__recommendation
+						.solutions__cause #{item.cause}
+						.solutions__price #{item.price}
+							span.solutions__additions.text--primary + запчасть #{item.additions}
+
+		.solutions__btn
+			button.btn.btn--fill.btn--dark.text--light.text--fw-500.solutions__cta #{data.tabs.cta_btn}

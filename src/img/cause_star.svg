@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="square star">
+<path id="Rectangle 360" d="M40 40L20 40C20 28.9543 28.9543 20 40 20L40 40Z" fill="#A95094"/>
+<path id="Rectangle 362" d="M20 40L0 40L-1.74845e-06 20C11.0457 20 20 28.9543 20 40Z" fill="#A95094"/>
+<path id="Rectangle 361" d="M40 20C28.9543 20 20 11.0457 20 1.70072e-05L40 1.52588e-05L40 20Z" fill="#A95094"/>
+<path id="Rectangle 363" d="M20 1.52588e-05C20 11.0457 11.0457 20 0 20L-1.74845e-06 1.70072e-05L20 1.52588e-05Z" fill="#A95094"/>
+</g>
+</svg>

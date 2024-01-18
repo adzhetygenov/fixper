@@ -1,0 +1,9 @@
+section.testimonials
+	.wrapper.testimonials__wrapper
+		.testimonials__list
+			each item, index in data.testimonials
+				.testimonials__item
+					.testimonials__icon
+						img(src=`img/t${index + 1}.svg`)
+					.testimonials__text.
+						#{item}

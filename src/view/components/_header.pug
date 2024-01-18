@@ -1,0 +1,23 @@
+header.header
+	.wrapper.header__wrapper
+		.header__intro
+			h1.text--light.header__heading #{data.header.h1}
+
+			p.text--light.text--fw-700.header__text
+				span.text--accent #{data.header.accentText}
+				| #{data.header.mainText}
+
+			button.btn.btn--fill.btn--dark.header__btn Заказать звонок
+
+
+		.header__hero
+			.header__img.header__img-washer
+				img(src=`img/${data.header.images.washer}`)
+
+			.header__img.header__img-repair
+				img(src=`img/${data.header.images.repair}`)
+
+		include _get-discount
+
+
+			

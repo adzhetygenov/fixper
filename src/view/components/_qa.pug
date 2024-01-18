@@ -1,0 +1,14 @@
+section.qa
+	.wrapper.qa__wrapper
+		.qa__heading
+			h2.qa__title #{data.qa.title}
+			p.qa__preheading #{data.qa.preheading}
+
+		ul.qa__questions
+			each item in data.qa.list
+				li.qa__item
+					.qa__question
+						button.qa__btn.js-accordion #{item.btn}
+
+						.qa__answer
+							p.qa__text #{item.text}

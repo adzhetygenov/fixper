@@ -1,0 +1,60 @@
+.testimonials {
+  padding-top: 44px;
+  padding-bottom: 57px;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 58px;
+
+    @media (min-width: 425px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 40px;
+      justify-content: space-around;
+    }
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    @media (min-width: 425px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      text-align: left;
+    }
+
+    @media (min-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 60px;
+  }
+
+  &__text {
+    font-family: TTNorms;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}

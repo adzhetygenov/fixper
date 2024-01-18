@@ -1,0 +1,39 @@
+section.prices
+	.wrapper.prices__wrapper
+		h2.prices__heading #{data.prices.title}
+
+		.prices__table
+			each item in data.prices_xs.list
+				.prices__item
+					.prices__thead.text--fw-500 #{item.th}
+
+					each detail in item.price
+						.prices__price
+							.prices__text #{detail.work_price_text}
+							
+							if detail.work_price_amount == 'Бесплатно'
+								.prices__amount.text--primary.text--fw-500 #{detail.work_price_amount}
+							else
+								.prices__amount.text--fw-500 #{detail.work_price_amount}
+
+		table.prices__table--md
+			thead.prices__thead
+				tr.prices__row
+					each heading in data.prices.th
+						th #{heading}
+
+			tbody
+
+				each item in data.prices.data
+					tr.prices__row
+						each td, index in item
+							if index != 0
+								if td == ""
+									td.prices__data
+								else if td == "Бесплатно"
+									td.prices__data.text--fw-500.text--primary #{td}
+								else
+									td.prices__data.text--fw-500 #{td}
+
+							else
+								td.prices__data.prices__service #{td}

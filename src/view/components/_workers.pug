@@ -1,0 +1,28 @@
+section.workers
+	.wrapper.workers__wrapper
+		.workers__heading
+			p.workers__preheading.text--fw-700.text--primary #{data.workers.preheading}
+			h2.workers__title #{data.workers.title}
+
+		.swiper
+			.swiper-wrapper
+				each item, index in data.workers.slides
+					.workers__card.swiper-slide
+						.workers__img
+							img(src=`img/w${index + 1}.png`, alt="")
+
+						.workers__info
+							.workers__details
+								p.workers__name.text--fw-500 #{item.worker_name}
+								p.workers__type #{item.worker_type}
+
+							ul.workers__list
+								each detail in item.list
+									li.workers__item #{detail}
+
+			.workers__controls.controls
+				.controls__pagination.swiper-pagination
+
+				.controls__buttons
+					.controls__button.controls__prev.text--fw-500.text--primary Назад
+					.controls__button.controls__next.text--fw-500.text--primary Далее

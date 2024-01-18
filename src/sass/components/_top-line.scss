@@ -1,0 +1,90 @@
+.top {
+  background-color: #a95094;
+
+  // Wrapper
+  &__wrapper {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @media (min-width: 1024px) {
+      order: 1;
+    }
+  }
+
+  // Middle part
+  &__middle {
+    overflow-x: scroll;
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #994786;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      overflow-x: auto;
+      flex-direction: row-reverse;
+      flex: 1;
+      order: 2;
+      padding: 40px 40px 40px 75px;
+      margin: 0;
+      border: 0;
+    }
+  }
+
+  // GEO Button
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/geo.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__callback {
+    width: 162px;
+
+    @media (min-width: 1024px) {
+      order: 3;
+    }
+  }
+
+  // Navigation
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-left: 35px;
+
+    @media (min-width: 1024px) {
+      margin-left: 0;
+    }
+  }
+
+  // Links
+  &__link,
+  &__btn {
+    color: #fff;
+    font-family: TTNorms;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+}

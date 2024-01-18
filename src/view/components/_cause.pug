@@ -1,0 +1,28 @@
+include mixins/_solution-tab
+
+section.cause
+	.wrapper.cause__wrapper
+
+		each tab in data.tabs.list
+			+tab(tab)
+
+		.cause__heading
+			p.cause__preheading.text--primary.text--fw-700 #{data.cause.preheading}
+			h2.cause__title #{data.cause.title}
+
+		.cause__options--lg
+			each option in data.options
+				button.cause__option.btn.btn--outline.btn--primary.text--primary.js-select(data-custom-properties=`{id: ${option.id}}`) #{option.text}
+
+		.cause__img
+			img(src='img/cause.png')
+
+
+		
+		.cause__options
+			select.cause__select.js-select
+				each option in data.options
+					option.cause__option.js-option(data-custom-properties=`{id: ${option.id}}`) #{option.text}
+
+		//- .cause__warning.text--dark.text--fw-500.
+		//- 	Выберите проблему и узнайте её решение

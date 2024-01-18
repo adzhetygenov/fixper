@@ -1,0 +1,27 @@
+section.feedback
+	.wrapper.feedback__wrapper
+		.feedback__heading
+			h2.feedback__title #{data.feedback.title}
+
+		.swiper
+			.swiper-wrapper
+				each item, index in data.feedback.list
+					.feedback__card.swiper-slide
+						.feedback__person
+							.feedback__img
+								img(src=`img/f${index + 1}.png`, alt="")
+
+							.feedback__details
+								p.feedback__name #{item.name}
+								p.feedback__date
+									time(datetime=item.date) #{item.date}
+
+						.feedback__text
+							p.feedback__comment #{item.text}
+
+			.feedback__controls.controls
+				.controls__pagination.swiper-pagination
+
+				.controls__buttons
+					.controls__button.controls__prev.text--fw-500.text--primary Назад
+					.controls__button.controls__next.text--fw-500.text--primary Далее

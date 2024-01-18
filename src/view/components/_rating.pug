@@ -1,0 +1,18 @@
+section.rating
+	.wrapper.rating__wrapper
+		ul.rating__cards
+			each item, index in data.rating
+				li.rating__card
+					.rating__amount
+						svg(width='24' height='23' viewbox='0 0 24 23' fill='none' xmlns='http://www.w3.org/2000/svg')
+							path(id='Star 37' d='M11.9565 0L15.611 7.24139L23.3278 8.63729L17.8696 14.5086L18.9844 22.6127L11.9565 19L4.92865 22.6127L6.04343 14.5086L0.585194 8.63729L8.30203 7.24139L11.9565 0Z' fill='#FFAC46')
+
+						.rating__numbers
+							p
+								span.rating__ratio #{item.ratio}
+								| / 5.0
+
+						.rating__overall #{item.overall}
+
+					.rating__platform
+						img(src=`img/r${index + 1}.png`)
