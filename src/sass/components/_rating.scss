@@ -80,7 +80,8 @@
       padding-left: 25px;
     }
 
-    > img {
+    & > img,
+    & > picture {
       width: 100px;
     }
   }
